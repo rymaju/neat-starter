@@ -1,0 +1,46 @@
+---
+layout: projects
+---
+
+<section class="mt-15 ">
+    {% set postslist = collections.post %}
+
+    {% for post in postslist | reverse %}
+        <article class="my-8 flex flex-col sm:flex-row">
+           <img class="object-cover h-48 sm:w-72 " src="{{ post.data.image }}"/>
+          
+            <div class="sm:p-5">
+                <h2 class="font-bold text-3xl text-gray-900 mb-0">
+                    <a href="{{ post.url | url }}">
+                        {% if post.data.title %}
+                            {{ post.data.title }}
+                        {% else %}
+                            Untitled
+                        {% endif %}
+                    </a>
+                </h2>
+                {% if post.data.description %}
+                    <p class="text-lg text-gray-500 mb-1">
+                        {{ post.data.description }}
+                    </p>
+                {% endif %}
+                {% if post.data.description %}
+                    <p class="text-sm text-gray-500 mt-0">
+                        {{ post.data.address }}
+                    </p>
+                {% endif %}
+                                {% if post.data.description %}
+                    <p class="text-sm text-gray-500 mb-1">
+                        {{ post.data.year }}
+                    </p>
+                {% endif %}
+                <p>
+                    <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                        Read more →
+                    </a>
+                </p>
+            </div>
+
+        </article>
+    {% endfor %}
+</section>
