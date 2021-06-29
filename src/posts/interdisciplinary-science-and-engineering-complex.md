@@ -3,7 +3,12 @@ title: Interdisciplinary Science and Engineering Complex
 image: https://www.payette.com/wp-content/uploads/2018/10/neu_streetview-1600x977.jpg
 description: Cutting-edge science facility for Northeastern University
 address: Boston, MA
+location: Boston, MA
 year: "2016"
+images:
+  - image: https://www.payette.com/wp-content/uploads/2014/04/nu-isec_slide_ext_3200x1800-1536x864.jpg
+  - image: https://www.payette.com/wp-content/uploads/2018/10/slide-6-7-1600x900.jpg
+  - image: https://www.payette.com/wp-content/uploads/2019/03/plan_northeastern_level-1-01-1600x1035.png
 ---
 **TOTAL SQUARE FOOTAGE**\
 234,000 GSF
