@@ -1,0 +1,31 @@
+---
+layout: default
+prism: true
+---
+
+<div class="container max-w-5xl mt-6 px-6">
+  <div class="pb-5 mb-5 border-b border-gray-100">
+    <h1 class="font-bold text-5xl">{{title}}</h1>
+    <h3 class="text-gray-500 text-center">{{description}}</h3>
+  </div>
+  <div class="flex flex-col md:flex-row">
+    <div class="md:w-1/2">
+      <div class="main-carousel" data-flickity='{ "imagesLoaded": true}'>
+        {% for imageObj in images %}
+          <img class="" src="{{imageObj.image}}"/>
+        {% endfor %}
+      </div>
+      
+      
+      
+    </div>
+    <div class="pt-0 md:pl-5 md:w-1/2">
+      <article class="prose">{{ content | safe }}</article>
+
+      <div class="mt-2 text-gray-500">
+        <p>{{location}}</p>
+        <p>{{year}}</p>
+      </div>
+    </div>
+  </div>
+</div>
