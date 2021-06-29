@@ -10,13 +10,15 @@ prism: true
   </div>
   <div class="flex flex-col md:flex-row">
     <div class="md:w-1/2">
-      <img class="pb-3" src="{{image}}"/>
+      {% for imageObj in images %}
+        <img class="pb-3" src="{{imageObj.image}}"/>
+      {% endfor %}
     </div>
     <div class="pt-0 md:pl-5 md:w-1/2">
       <article class="prose">{{ content | safe }}</article>
 
       <div class="mt-2 text-gray-500">
-        <p>{{address}}</p>
+        <p>{{location}}</p>
         <p>{{year}}</p>
       </div>
     </div>

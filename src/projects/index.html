@@ -6,8 +6,8 @@ layout: projects
     {% set postslist = collections.post %}
 
     {% for post in postslist | reverse %}
-        <article class="my-8 flex flex-col sm:flex-row">
-           <img class="object-cover h-48 sm:w-72 " src="{{ post.data.image }}"/>
+        <article class="my-8 flex flex-col sm:flex-row sm:items-center">
+           <img class="object-cover h-48 sm:w-72 " src="{{ post.data.images[0].image }}"/>
           
             <div class="sm:p-5">
                 <h2 class="font-bold text-3xl text-gray-900 mb-0">
@@ -26,7 +26,7 @@ layout: projects
                 {% endif %}
                 {% if post.data.description %}
                     <p class="text-sm text-gray-500 mt-0">
-                        {{ post.data.address }}
+                        {{ post.data.location }}
                     </p>
                 {% endif %}
                                 {% if post.data.description %}
