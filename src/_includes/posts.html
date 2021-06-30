@@ -10,13 +10,14 @@ prism: true
                                                "fullscreen": true ,
                                               "setGallerySize": false}'>
     {% for imageObj in images %}
+
       <img class="object-cover md:object-contain w-full h-full" src="{{imageObj.image}}"/>
     {% endfor %}
   </div>
   <h1 class="font-bold text-3xl font-bold md:text-5xl mb-8">{{title}}</h1>
 
   <div class="container max-w-5xl flex flex-col md:flex-row">
-    <div class="md:w-2/3">
+    <div class="md:w-2/3 mb-5">
       <article class="prose">{{ content | safe }}</article>
 
     </div>

@@ -2,7 +2,7 @@
 layout: projects
 ---
 
-<section class="mt-15 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+<section class="mt-15 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
         <a href="{{ post.url | url }}">
