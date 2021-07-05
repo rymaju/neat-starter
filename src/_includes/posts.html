@@ -18,6 +18,14 @@ prism: true
 
   <div class="container max-w-5xl flex flex-col md:flex-row">
     <div class="md:w-2/3 mb-5">
+      
+      <template x-if="chinese">
+        <div>ni hao</div>
+      </template>
+ 
+    <span x-if="chinese">
+      Content...
+    </span>
       <article class="prose">{{ content | safe }}</article>
 
     </div>
