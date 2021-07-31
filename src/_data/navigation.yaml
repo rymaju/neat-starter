@@ -1,6 +1,10 @@
 ---
 items:
-  - text: Projects
-    url: "/projects"
+  - text: Studio
+    url: "/studio"
+  - text: Work
+    url: "/work"
+  - text: Expertise
+    url: "/expertise"
   - text: Contact
     url: "/contact"

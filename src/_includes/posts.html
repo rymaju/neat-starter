@@ -3,33 +3,30 @@ layout: default
 prism: true
 ---
 
-<div class="px-6">
-  <div class="main-carousel mb-12 h-40v sm:h-70v" style="" data-flickity='{ "imagesLoaded": true, 
+<div class="md:flex md:flex-row-reverse">
+  <div class="main-carousel mb-12 h-40v sm:h-70v md:w-3/5 md:m-6" style="" data-flickity='{ "imagesLoaded": true, 
                                                "pageDots": true, 
                                                "wrapAround": true,
                                                "fullscreen": true ,
                                               "setGallerySize": false}'>
     {% for imageObj in images %}
 
-      <img class="object-cover md:object-contain w-full h-full" src="{{imageObj.image}}"/>
+      <img class="object-cover  w-full h-full" src="{{imageObj.image}}"/>
     {% endfor %}
   </div>
-  <h1 class="font-bold text-3xl font-bold md:text-5xl mb-8">{{title}}</h1>
 
-  <div class="container max-w-5xl flex flex-col md:flex-row">
-    <div class="md:w-2/3 mb-5">
-      
+  <div class="container max-w-5xl px-6 md:w-2/5 md: md:pt-12">
+    <h1 class="font-bold text-3xl text-left font-bold md:text-3xl mb-4">{{title}}</h1>
+    <div class="flex flex-col md:flex-row w-full">
+  
+    <div class="mb-5">
       <template x-if="chinese">
         <div>ni hao</div>
       </template>
  
-    <span x-if="chinese">
-      Content...
-    </span>
-      <article class="prose">{{ content | safe }}</article>
+      <article class="prose mb-5">{{ content | safe }}</article>
 
-    </div>
-    <div class="pt-0 md:pl-5 md:w-1/3">
+
       <p class="font-bold">Services</p>
       <p>Architecture, Interior Design, Planning, Landscaping</p>
       <div class="mt-2 text-gray-500">
@@ -37,5 +34,7 @@ prism: true
         <p>{{year}}</p>
       </div>
     </div>
+    </div>
+
   </div>
 </div>

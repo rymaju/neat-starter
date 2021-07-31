@@ -2,13 +2,13 @@
 layout: projects
 ---
 
-<section class="mt-15 grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+<section class="mt-15 grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
     {% set postslist = collections.post %}
     {% for post in postslist | reverse %}
         <a href="{{ post.url | url }}">
             <div class="aspect-w-1 aspect-h-1">
                 <img class="object-cover " src="{{ post.data.images[0].image }}"/>
-                <div class="hidden sm:flex opacity-0 hover:opacity-100 bg-gray-800 bg-opacity-80  transition  items-center justify-center">
+                <div class="hidden md:flex opacity-0 hover:opacity-100 bg-gray-800 bg-opacity-80  transition  items-center justify-center">
                     <span class="text-white p-5">
                         <p class="font-bold">{{ post.data.title }}</p>
                         <p>{{ post.data.location }}</p>
@@ -16,7 +16,7 @@ layout: projects
                     </span>
                 </div>
             </div>
-            <div class="sm:hidden">
+            <div class="md:hidden">
                 <div class="text-black mt-2 mb-5">
                     <p class="font-bold">{{ post.data.title }}</p>
                     <p>{{ post.data.location }}</p>
